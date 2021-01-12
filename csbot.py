@@ -18,17 +18,17 @@ def Indice(update, context):
     return STATE1
 
 def inputIndice(update, context):
-    indice = lower(update.message.text)
-    print(indice)
-    if indice == '1' or indice == 'filmes':
-        message = """esses são os filmes que já foram postados.
-                        \nEm breve novas atualizações."""
+    Indice = lower(update.message.text)
+    print(Indice)
+    if (Indice == '1' or Indice == 'filmes'):
+        message = '''esses são os filmes que já foram postados. \n
+                        Em breve novas atualizações.'''
         context.bot.send_message(chat_id=update.effective_chat.id, text=message)
         return STATE2
     else:
-        if indice == '2' or indice == 'séries':
-        message = """essas são as séries que já foram postadas.
-                        \nEm breve novas atualizações."""
+        if (Indice == '2' or Indice == 'séries'):
+            message = '''essas são as séries que já foram postadas. \n
+                        Em breve novas atualizações.'''
         context.bot.send_message(chat_id=update.effective_chat.id, text=message)
         return STATE2
 
